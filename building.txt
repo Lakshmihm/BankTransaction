@@ -1,0 +1,44 @@
+=====================
+BANK WORKTEST
+Building Instructions
+=====================
+
+This directory contains all source code, documentation and build files needed to complete
+the bank worktest assignment. Please read 'bank_worktest.pdf' for full instructions.
+
+Prerequisites
+-------------
+
+In order to build and run the project you will need the following tools:
+
+ * JDK 1.7+
+   http://www.oracle.com/technetwork/java/javase/downloads/
+
+ * Apache Maven 3+
+   http://maven.apache.org
+
+Build Instructions
+------------------
+
+To compile and test your solution, run:
+
+    mvn clean test
+
+If you have additional dependencies just add them to the pom.xml accordingly.
+
+To find a specific dependency, go to http://search.maven.org/.
+
+If a dependency is not available in the public Maven repo, you need to add
+the jar file to a lib directory and use system scope to point it out
+in the pom.xml.
+
+Example:
+
+<dependency>
+    <groupId>org.lib</groupId>
+    <artifactId>stuff</artifactId>
+    <version>1.2.3</version>
+    <type>jar</type>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/lib/stuff-1.2.3.jar</systemPath>
+</dependency
